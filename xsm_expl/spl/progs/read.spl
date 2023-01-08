@@ -1,0 +1,20 @@
+alias userSP R3;
+alias physicalSP R4;
+alias address R5;
+
+userSP = SP;
+
+physicalSP = [PTBR +  ( userSP / 512 ) * 2] * 512 + (userSP % 512);
+
+address = [physicalSP - 3];
+
+// translate adress
+address = [PTBR + (address/512) * 2 ] * 512 + (address % 512);
+
+inline "IN";
+
+[address] = P0;
+
+[physicalSP - 1] = 0;
+
+ireturn;

@@ -1,0 +1,13 @@
+MOV R16,  "Exception"
+PORT P1, R16
+OUT
+MOV R16,  "Found"
+PORT P1, R16
+OUT
+MOV R16,  "Program"
+PORT P1, R16
+OUT
+MOV R16,  "Terminated"
+PORT P1, R16
+OUT
+HALT

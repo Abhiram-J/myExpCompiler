@@ -1,0 +1,10 @@
+begin
+    read(a);
+    read(b);
+    c = 6;
+    e = 3;
+    f = 4;
+    g = 5;
+    d = f*(a + b)-c/e;
+    write(d-g+1);
+end;

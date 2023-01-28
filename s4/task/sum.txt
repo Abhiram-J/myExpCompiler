@@ -1,0 +1,18 @@
+begin
+decl
+int num , sum, a[5];
+string mesg;
+enddecl
+read(num);
+sum = 0;
+while (num != 0) do
+  sum = sum + num;
+  read(num);
+endwhile;
+write("sum is:");
+write(sum);
+mesg = "value of a[0]";
+a[5] = 20000;
+write(mesg);
+write(a[4] + sum);
+end;

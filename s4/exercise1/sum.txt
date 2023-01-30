@@ -1,0 +1,10 @@
+begin
+decl
+int num , sum, a[2][3];
+string mesg;
+enddecl
+a[1][2] = 20000;
+sum = 2;
+write(a[1][2]);
+write(a[1][2] + sum);
+end;

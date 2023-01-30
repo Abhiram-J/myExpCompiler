@@ -1,0 +1,11 @@
+begin
+decl
+    int n,i,j, a[2][3];
+enddecl
+    read(a[1][2]);
+    if( a[1][2] % 2 == 0) then
+    write("even");  
+    else 
+    write(a[1][2] + 1);
+    endif;
+end;

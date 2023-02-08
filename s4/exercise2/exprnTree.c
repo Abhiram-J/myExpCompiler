@@ -25,8 +25,6 @@ int operatorCheck(int nodeType , int lType, int rType){
 struct treeNode* createTree(int val, int type, char* varname, int nodeType, struct treeNode *l, struct treeNode *r){
 
     if ( l && r && operatorCheck(nodeType, l->type, r->type)){
-        // printf("%d %d %d", nodeType, l->type, r->type);
-        // printf("%d %d", l->nodetype,r->nodetype);
         yyerror("Type mismatch");
     }
 
@@ -475,7 +473,7 @@ reg_index codeGen(struct treeNode *root, FILE *fp){
         fprintf(fp, "JZ R%d, L%d\n", r1, label1);
         freeReg();
         if ( root->right->nodetype == elseNode){
-            // fprintf (fp, "ethi");
+          
             r1 = codeGen(root->right->left, fp);
             freeReg();
             fprintf (fp, "JMP L%d\n", label2);
@@ -484,7 +482,7 @@ reg_index codeGen(struct treeNode *root, FILE *fp){
             freeReg();
             fprintf (fp, "L%d:\n", label2);
         }else{
-            // fprintf (fp, "oombi");
+           
             r1 = codeGen(root->right, fp);
             freeReg();
             fprintf (fp, "L%d:\n", label1);

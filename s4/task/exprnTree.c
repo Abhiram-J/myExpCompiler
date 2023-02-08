@@ -380,7 +380,7 @@ reg_index codeGen(struct treeNode *root, FILE *fp){
         fprintf(fp, "JZ R%d, L%d\n", r1, label1);
         freeReg();
         if ( root->right->nodetype == elseNode){
-            // fprintf (fp, "ethi");
+            
             r1 = codeGen(root->right->left, fp);
             freeReg();
             fprintf (fp, "JMP L%d\n", label2);
@@ -389,7 +389,7 @@ reg_index codeGen(struct treeNode *root, FILE *fp){
             freeReg();
             fprintf (fp, "L%d:\n", label2);
         }else{
-            // fprintf (fp, "oombi");
+           
             r1 = codeGen(root->right, fp);
             freeReg();
             fprintf (fp, "L%d:\n", label1);

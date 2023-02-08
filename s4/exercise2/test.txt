@@ -1,0 +1,13 @@
+begin
+decl
+    int n , an[2][3], bn[5], *ptrn , *ptrn1;
+    string s , as[5], bs[2][3], *ptrs;
+enddecl
+    read(bn[1]);
+    read(an[1][2]);
+    ptrn = &an[1][2];
+    ptrn1 = &bn[1];
+    *ptrn = *ptrn + *ptrn1 + 1;
+    write(*ptrn);
+    write(an[1][2]);
+end;

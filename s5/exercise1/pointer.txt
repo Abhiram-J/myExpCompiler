@@ -1,0 +1,27 @@
+decl
+    int result, a,b, func(int c, string s) ;
+    string t;
+enddecl
+int func(int c , string s) {
+    decl
+        int a, b,c;
+    enddecl
+    begin
+        write(c);
+        write(s);
+    end
+}
+
+int main () {
+    decl
+        int a, b, c, *p;
+        string s;
+    enddecl
+    begin
+        a = 1;
+        p = &a;
+        *p = 2;
+        write(a);
+        write(*p);
+    end
+}

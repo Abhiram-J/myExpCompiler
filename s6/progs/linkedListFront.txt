@@ -1,0 +1,59 @@
+type
+  linkedList
+  {
+    int data;
+    linkedList next;
+  }
+  markList
+  {
+    string name;
+    linkedList marks;
+  }
+  
+endtype
+
+decl
+    linkedList head;
+    markList mList,temp;
+enddecl
+
+int main()
+{
+  decl
+    int length, x;
+    linkedList p, q;
+  enddecl
+
+  begin
+    x = initialize();
+
+    head=null;
+    read(length);
+
+    q=head;
+    while (length!=0)  do
+      read(x);
+      p=alloc();
+      p.data=x;
+      p.next=null;
+
+      if (head == null) then
+      head=p;
+      q=p;
+      else
+      q.next=p;
+      q=q.next;
+      endif;
+
+      length=length-1;
+    endwhile;
+
+    p=head;
+    while(p!=null)  do
+      write(p.data);
+      p=p.next;
+    endwhile;
+
+return 0;
+end
+}

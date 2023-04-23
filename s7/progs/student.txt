@@ -1,0 +1,29 @@
+class Person {
+    decl
+        str name;
+        int age;
+        int printDetails();
+        str findName();
+        int createPerson(str name, int age);
+    enddecl
+    int printDetails(){
+        begin
+            write(self.name);
+            write(self.age);
+            return 1;
+        end
+    }
+    str findName(){
+        begin
+            return self.name;
+        end
+    }
+    int createPerson(str name, int age){
+        begin
+            self.name=name;
+            self.age=age;
+            return 1;
+        end
+    }
+} 
+endclass
